@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color Changer</title>
+    <link rel="stylesheet" href="style.css">
+    <script>   
+        function changeBackgroundColor() {
+            const colors = [
+                'red', 'blue', 'green', 'yellow', 'purple', 
+                'orange', 'pink', 'cyan', 'magenta', 'lime'
+            ];
+            document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+
+            document.getElementById('colorDisplay').textContent = document.body.style.backgroundColor;
+        }
+    </script>
+</head>
+<body>
+    <h1>Background Color Changer</h1>
+    <p>Click the button below to change the background color of this page.</p>
+    <button onclick="changeBackgroundColor()">Change Background Color</button>
+    <p>Current Color: <span id="colorDisplay">None</span></p>
+</body>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 50px;          
+        transition: background-color 0.5s ease;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 16px;        
+    
+</html>
